@@ -59,3 +59,13 @@ Linux Cooked interface使用编译（venetX，OpenVZ）：
     #参数：./net_speeder 网卡名 加速规则（bpf规则）
     #ovz用法(加速所有ip协议数据)： 
     ./net_speeder venet0 "ip"
+    
+ 使用方法
+    ```
+    nohup /地址/net_speeder venet0 "ip" >/dev/null 2>&1 &
+    ```
+ 开机启动
+ ```
+ echo 'nohup /地址/net_speeder venet0 "ip" >/dev/null 2>&1 &' >> /etc/rc.local
+ ```
+    启动
